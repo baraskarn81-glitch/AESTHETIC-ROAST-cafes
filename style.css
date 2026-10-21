@@ -1,0 +1,333 @@
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+    body{
+        width: 100vw;
+        height: auto;
+
+    }
+    @media screen (max-width:450px) {
+        body{
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+           gap:20px;
+            flex-wrap: wrap;
+        }
+        header{
+            width: 100px;   
+            height: 100px;
+        }
+        .grid-sec{
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-batch{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+    header{
+        height: 7%;
+        width: 100%;
+        display: flex;
+        background-color: rgb(152, 204, 204);
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+    }
+    
+    header p{
+        position: relative;
+        left: -7%;
+        font-size: x-large;
+        font-weight: 600;
+    }
+    header i{
+        position: relative;
+        right: -7%;
+    }
+    main{
+        width: 100vw;
+        height: 300vh;
+        position: relative;
+    }
+
+
+    .nav{
+        background-color: aquamarine;
+        width: 30%;
+        height: 13%;
+        position: fixed;
+        z-index: 1;
+       
+        border-radius: 11px;
+        bottom: 5%;
+        left: 35%;
+        
+    
+    }
+    .nav ul{
+        position: relative;
+        top: 30%;
+        width: 100%;
+        height: 30%;
+        list-style: none;
+        display: flex;
+        
+        justify-content: space-around;
+       
+    
+    
+    }
+    .nav ul li a{
+        
+         height: 170%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+         color: rgb(121, 63, 63);
+         text-decoration: none;
+    }
+    .nav ul li a:hover{
+        transform: translateY(-4px);
+        color: rgb(24, 1, 1);
+    }
+    .nav ul li a:active{
+        background-color: black;
+        color: white;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+    
+    .order{
+        position: relative;
+        height: 95vh;
+        width: 100%;
+        
+        text-align: center;
+        
+        background-color:rgb(7, 58, 58);
+    }
+    .order img{
+        position: absolute;
+        top: 10%;
+        left: 43%   ;
+        height: 200px;
+        width: 200px;
+    }
+    .order h1{
+        position: absolute;
+        top: 47%;
+        left: 35%;
+        width: 400px;
+        text-align: center;
+        color: white;
+    }
+    .order button{
+        position: absolute;
+        top: 65%;
+        left: 45%;
+        border-radius: 11px;
+        color: white;
+        border: none;
+        background-color: black;
+        padding: 20px 40px;
+    }
+    .order button:hover{
+    
+
+    cursor: pointer;
+    transform: scale(1.1);
+}
+    
+    .grid-sec{
+        height: 30%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1fr,1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "a b";
+       
+    }
+    @media screen (max-width:450px) {
+        
+    }
+    .image-side{
+        width: 50vw;
+        height:120%;
+        grid-area: a;
+        position: relative;
+        top: 4%;
+      
+        
+        
+    }
+    .image-side img{
+        position: absolute;
+        top: 2%;
+        left: 20%;
+        width: 80%;
+        height: 80%;
+        border-radius: 11px;
+    
+    }
+    .content{
+        width: 55%;
+        position: relative;
+      top: 4%;
+      left: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items:start;
+      justify-content: center;
+      gap: 20px;
+        
+        grid-area: b;
+    }
+    #content-sign p{
+        font-size: large;
+        color: rgb(109, 85, 85);
+    }
+    #content-sign h5{
+        font-size: medium;
+        font-weight: 200;
+        color: rgb(109, 80, 80);
+        padding: 10px 0px;
+    }
+    .grid-batch{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "ethical small";
+        gap: 10px;
+    }
+    #ethical{
+        width: 180px;
+        height: 70px;
+        grid-area: ethical;
+        border-radius: 7px;
+        padding: 8px;
+        background-color: antiquewhite;
+    }
+    #small{
+        grid-area: small;
+        width: 180px;
+        height: 70px;
+        border-radius: 7px;
+        padding: 8px;
+        background-color: antiquewhite;
+    }
+    .content button{
+        width: 200px;
+        height: 40PX;
+        padding: 5px;
+        border: 2px solid black;
+        background-color:white;
+        border-radius: 11px;
+        font-weight: 400;
+       
+    }
+    .content button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+        border: none;
+    
+}
+    .sellect{
+        height: 380px;
+        width: 100%;
+        
+        position: absolute;
+        top:70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: antiquewhite;
+        
+    }
+    .sellect i{
+        color: rgb(131, 117, 117);
+    }
+    .sellect h1{
+        width: 75%;
+        font-style:italic;
+        font-weight: 300;
+       
+        padding: 10px 0px;
+        text-align: center;
+        
+    }
+    .sellect hr{
+        width: 7%;
+        text-align: center;
+        position: absolute;
+        top: 65%;
+    }
+    .sellect p{
+        padding:10px 0px;
+        font-size: medium;
+        color: rgb(122, 90, 90);
+    }
+    footer{
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        text-align: center;
+    }
+    .join{
+        position: relative;
+        left: 10%;
+        width: 80%;
+        height: 70%;
+        border: 1px solid rgb(220, 220, 228);
+       / text-align: center;
+        gap: 10PX;
+        border-radius: 22PX;
+    }
+    .join h1{
+        position: absolute;
+        top: 15%;
+        left: 40%;
+        font-weight: 400;
+    }
+    .join p{
+        width: 40%;
+        font-size: large; 
+        position: absolute;
+        top: 35%;
+        left: 28%;
+    }
+    .join span{
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        width: 50%;
+        height: 15%;
+        text-align: center;
+    }
+    .join span input{
+        height: 100%;
+        width: 60%;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    .join span button{
+        height: 100%;
+        padding: 0px 10px;
+        color: white;
+        background-color: black;
+        border: none;
+        border-radius: 5px;
+        
+    }

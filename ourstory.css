@@ -1,0 +1,373 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    width: 100%;
+    height: 300vh;
+    box-sizing: border-box;
+}
+
+header {
+    height: 7%;
+    width: 100%;
+    display: flex;
+    background-color: rgb(243, 243, 232);
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+header p {
+    position: relative;
+    left: -7%;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+header i {
+    position: relative;
+    right: -7%;
+}
+
+main {
+    width: 100%;
+    height: 120vh;
+    /background-color: rgb(243, 243, 232);
+    position: relative;
+}
+
+.nav {
+    background-color: aquamarine;
+    width: 30%;
+    height: 13%;
+    position: fixed;
+    z-index: 1;
+
+    border-radius: 11px;
+    bottom: 5%;
+    left: 35%;
+
+
+}
+
+.nav ul {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    height: 30%;
+    list-style: none;
+    display: flex;
+
+    justify-content: space-around;
+
+
+
+}
+
+.nav ul li a {
+    
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    color: rgb(121, 63, 63);
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    transform: translateY(-4px);
+    color: rgb(24, 1, 1);
+}
+
+.nav ul li a:active {
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.frant-back{
+    background-image: url(./asseats/ourstory.png);
+    width: 100wv;
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    color: white;
+}
+.frant-back p{
+    position: absolute;
+    bottom: 16%;
+    font-size: larger;
+    left: 4%;
+}
+.frant-back h1{
+    width: 300px;
+    position: absolute;
+    bottom: 0%;
+    left: 4%;
+    font-weight: 500;
+}
+.chapter{
+    height: 600px;
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.ethical{
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    width: 45%;
+    gap: 15px;
+}
+.ethical h1{
+    font-weight: 400;
+}
+.ethical p{
+    color: brown;
+}
+#paira5{
+    font-size:large;
+    padding: 10px 0px;
+}
+.chapter-img{
+    background-image: url(./asseats/chapter.png);
+    background-size: cover;
+    width: 40%;
+    height: 65%;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    border-radius: 11px;
+}
+.chapter-img:hover{
+    transform: scale(0.9);
+}
+.trede{
+    width: 100%;
+    height: 300px;
+
+    position: relative;
+    display: flex;
+    
+   
+}
+.trede-img{
+    background-image: url(./asseats/trede.png);
+     width: 31%;
+    height: 100%;
+    position: absolute;
+    border-radius: 7px;
+    left: 5%;
+    background-size: cover;
+}
+
+
+.Direct-trede{
+    border-radius: 7px;
+    background-color:rgb(186, 243, 224);
+    gap: 15px;
+    width: 55%;
+    height: 90%;
+    
+    position: absolute;
+    /top: 35%;
+    right: 5%;
+    padding:  15px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Direct-trede h1{
+    font-weight: 400;
+}
+.Direct-trede p{
+    font-size: large;
+   
+}
+.Story{
+    margin-top: 7%;
+    width: 100%;
+    height: 400px;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: rgb(146, 63, 63);
+
+}
+.Story h1{
+        font-style: italic;
+        width: 580px;
+        font-size: 45px;
+
+
+    }
+.alchemy{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+
+}
+.heat-img{
+    background-image: url(./asseats/heat.png);
+    background-size: cover;
+    width: 35%;
+    height: 90%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 11px;
+}
+.heat{
+    position: absolute;
+    right: 5%;
+    width: 43%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.heat h1{
+    font-weight: 400;
+}
+.heat p{
+    color: brown;
+    font-size: large;
+    padding: 20px 0px;
+}
+.heat ul{
+    position: relative;
+    left: 3%;
+}
+.heat ul li{
+    
+    
+    left: 10%;
+    padding: 7px;
+    font-weight: 300;
+    font-size: large;
+}
+.final-chapter{
+    width: 100%;
+    height: 110vh;
+    background-color: rgb(240, 240, 225);
+    text-align: center;
+    position: relative;
+}
+.final-chapter h1{
+    position: absolute;
+    top: 6%;
+    left: 40%;
+    font-weight: 400;
+    font-size: 400;
+}
+.final-chapter p{
+    position: absolute;
+    top: 2%;
+    left: 45%;
+}
+.grid-part{
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    position: relative;
+    left: 7%;
+    right: 5%;
+    top: 13%;
+}
+#grid-cord{
+    position: relative;
+    height: 500px;
+    width: 350px;
+    text-align: start;
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+   
+}
+#grid-cord:hover{
+    border: 1px solid brown;
+}
+#card-img1{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 380px;
+     background-image: url(./asseats/pourlower.png);
+     background-size: cover;
+     border-radius: 11px;
+}
+#grid-cord h1 {
+    position: absolute;
+    top: 82%;
+    left: 5%;
+    font-weight: 400;
+}
+#grid-cord p {
+    color: rgb(49, 40, 40);
+    position: absolute;
+    top: 90%;
+    left: 5%;
+}
+#card-img2{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 380px;
+     background-image: url(./asseats/the.png);
+     background-size: cover;
+     border-radius: 11px;
+}
+#card-img3{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 380px;
+     background-image: url(./asseats/last.png);
+     background-size: cover;
+     border-radius: 11px;
+}
+.exprince{
+    height: 400px;
+    width: 100vw;
+    position: relative;
+}
+.exprince h1{
+    font-weight: 400;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+.exprince button{
+    position: absolute;
+    top: 48%;
+    left: 39%;
+    padding: 15px;
+    color: white;
+    background-color: black;
+    font-size: medium;
+    width: 300px;
+    border: none;
+    border-radius: 11px;
+}
+.exprince button:hover{
+    background-color: rgb(49, 43, 43);
+}

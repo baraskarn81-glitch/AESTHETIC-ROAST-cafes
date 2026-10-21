@@ -1,0 +1,399 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    width: 100%;
+    height: 300vh;
+    box-sizing: border-box;
+}
+
+header {
+    height: 7%;
+    width: 100%;
+    display: flex;
+    / flex-direction: column;
+    background-color: rgb(243, 243, 232);
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+header p {
+    position: relative;
+    left: -7%;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+header i {
+    position: relative;
+    right: -7%;
+}
+
+main {
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(243, 243, 232);
+    position: relative;
+}
+
+.nav {
+    background-color: aquamarine;
+    width: 30%;
+    height: 13%;
+    position: fixed;
+    z-index: 1;
+
+    border-radius: 11px;
+    bottom: 5%;
+    left: 35%;
+
+
+}
+
+.nav ul {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    height: 30%;
+    list-style: none;
+    display: flex;
+
+    justify-content: space-around;
+
+
+
+}
+
+.nav ul li a {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    color: rgb(121, 63, 63);
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    transform: translateY(-4px);
+    color: rgb(24, 1, 1);
+}
+
+.nav ul li a:active {
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.our-prenses {
+    height: 100px;
+    width: 100%;w
+    position: relative;
+    top: 8%;
+    text-align: center;
+}
+
+.our-prenses h1 {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    font-weight: 500;
+}
+
+.our-prenses p {
+    width: 530px;
+    position: absolute;
+    top: 17%;
+    left: 33%;
+    font-size: large;
+}
+
+.box-content {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+#box {
+    border-radius: 7px;
+    width: 350px;
+    height: 450px;
+    background-color: aquamarine;
+
+}
+
+#box:hover {
+    border: 1px solid gray;
+    transform: scale(1.0);
+    cursor: pointer;
+}
+
+#back-img {
+    width: 100%;
+    height: 60%;
+    border-radius: 7px 7px 0px 0px;
+    background-image: url(./asseats/warehouse.png);
+    background-size: cover;
+
+}
+
+#back-img:hover {
+    transform: scale(1);
+
+    cursor: pointer;
+}
+
+.back-content {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    left: 6%;
+    background-color:;
+}
+
+.back-content span {
+
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    position: absolute;
+    top: 10%;
+}
+
+.back-content span h1 {
+    font-weight: 400;
+}
+
+#heri {
+    position: relative;
+    top: 45%;
+    font-size: large;
+}
+
+#day {
+    position: absolute;
+    top: 67%;
+    gap: 180px;
+
+}
+
+#weekend {
+    position: absolute;
+    top: 80%;
+    gap: 180px;
+}
+
+.back-content span button {
+    padding: px;
+    color: white;
+    background-color: black;
+    width: 60px;
+    height: 30px;
+    border-radius: 7px;
+
+    border: none;
+}
+
+#back-img1 {
+    width: 100%;
+    height: 60%;
+    border-radius: 7px 7px 0px 0px;
+    background-image: url(./asseats/thestudio.png);
+    background-size: cover;
+}
+
+#content-stidio {
+    width: 100%;
+    height: 40%;
+    gap: 20px;
+    position: relative;
+    left: 8%;
+}
+
+#content-stidio h1 {
+    position: absolute;
+    top: 10%;
+    font-weight: 300;
+}
+
+#para {
+    position: absolute;
+    top: 35%;
+    font-size: large;
+}
+
+#time {
+   position: absolute;
+    top: 80%;
+    gap: 180px;
+    display: flex;
+}
+
+
+
+.map:hover {
+    display: block;
+}
+
+#back-img2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px 7px 0px 0px;
+    background-image: url(./asseats/map.png);
+    background-size: cover;
+
+
+}
+
+#back-img2 ul {
+    list-style: none;
+    text-align: center;
+    gap: 20px;
+}
+
+#back-img2 ul li i {
+    color: white;
+    background-color: black;
+    width: 30px;
+    height: 20px;
+    padding-top: 4px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+#back-img2 ul li {
+    padding: 7px 0px;
+}
+
+#back-img2 ul li button {
+    padding: 10px;
+}
+
+#back-img2 ul li button:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+footer{
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    background-color: rgb(48, 35, 35);
+    color: white;
+    text-align: center;
+}
+#partner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "partner quairy";
+    gap: 20px;
+    height: 100%;
+    text-align: center;
+    margin-left:8%;
+    margin-top: 5%;
+}
+.patner{
+    grid-area: partner;
+    width: 500px;
+    height: 80%;
+    text-align: start;
+    color: gray;
+
+}
+.patner p{
+    padding: 10px 0px;
+    font-size: large;
+}
+.patner ul{
+    list-style: none;
+}
+.patner ul li{
+    display: flex;
+    text-align: center      ;
+    gap: 15px;
+}
+#Direct{
+    margin-top: 10%;
+    border: 1px solid gray;
+    border-radius: 7px;
+padding-left: 5% ;}
+
+.quairy{    
+    grid-area: quairy;
+    width: 500px;
+    height: 80%;
+    padding-left: 50px;
+    text-align: start;
+    border-radius: 11px;
+    background-color: white;
+    color: rgb(59, 57, 57);
+    padding-top: 15px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.quairy p{
+    font-size: medium;
+}
+.quairy input{
+    width: 90%;
+    border: none;
+    padding-bottom: 10px;
+    border-bottom:1px solid rgb(87, 62, 62);
+    font-size: medium;
+}
+.quairy span input{
+    width: 45%;
+    gap: 10px;
+    padding-bottom: 20px;
+    font-size: small;
+    color: rgb(104, 88, 88);
+}
+#tell{
+    padding-bottom: 40px;
+}
+.quairy button{
+    height: 80px;
+    margin-top: 40px;
+    width: 90%;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: medium;
+}
+.quairy button:hover{
+    background-color: rgb(73, 54, 54);
+}
+.INTRIGITY{
+    text-align: center;
+    position: relative;
+    top: 10%;
+    gap: 20px;
+}
+.INTRIGITY h2{
+    padding: 10px 0px;
+}
+.INTRIGITY p{
+    width: 580px;
+    font-size: large;
+    position: absolute;
+    left: 30%;
+}
