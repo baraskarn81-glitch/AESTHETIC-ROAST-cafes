@@ -109,9 +109,9 @@ main {
     height: 13%;
     position: fixed;
     z-index: 1;
-
+     left: 35%;
     border-radius: 11px;
-    bottom: 5%;
+    bottom: 3%;
    
 
 
