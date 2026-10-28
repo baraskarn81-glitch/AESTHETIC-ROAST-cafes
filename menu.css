@@ -1,19 +1,27 @@
-* {
-    padding: 0;
-    margin: 0;
-
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
 body {
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 0;
     box-sizing: border-box;
-
+     overflow-x: clip;
 }
+
+
 
 header {
     height: 7%;
+    min-height: 65px;
+    padding: 12px 5%;
     width: 100%;
     display: flex;
     background-color: azure;
@@ -38,7 +46,7 @@ header i {
 
 main {
     height: auto;
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 
@@ -50,10 +58,22 @@ main {
     z-index: -1;
        top: 5%;
     position: fixed;
-
+     background-position: center;
 }
 
+
+    
+
+
+
 .menu-img {
+    min-height: 300px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 16px 30px;
     position: relative;
     top:15%;
     color: white;
@@ -61,23 +81,26 @@ main {
 }
 
 .menu-img h1 {
-    position: absolute;
+    position: static;
     top: 7%;
-    font-size: xx-large;
+   font-size: clamp(32px, 5vw, 52px);
     left: 46%;
 }
 
 .menu-img hr {
     width: 50px;
-    position: absolute;
+    position: static;
     top: 9%;
+     margin: 12px 0;
     left: 47%;
 }
 
 .menu-img p {
+     max-width: 100%;
+    font-size: clamp(12px, 2vw, 16px);
     top: 10%;
     left: 40%;
-    position: absolute;
+    position: static;
 }
 
 .nav {
@@ -89,19 +112,19 @@ main {
 
     border-radius: 11px;
     bottom: 5%;
-    left: 35%;
+   
 
 
 }
 
 .nav ul {
     position: relative;
-    top: 30%;
+    top: 25%;
     width: 100%;
     height: 30%;
     list-style: none;
     display: flex;
-    /align-items: center;
+    align-items: center;
 
     justify-content: space-around;
 
@@ -110,7 +133,8 @@ main {
 }
 
 .nav ul li a {
-    height: 40px;
+    
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -133,16 +157,17 @@ main {
 
 .backgra {
     width: 100%;
-    height: 350vh;
+    height: auto;
     position: relative;
    / top: 30%;
     background-color: azure;
-    margin-top: 30%;
+    font-size: large;
+    padding-bottom: 100;
 
 }
 
 .bar {
-    height: 60px;
+    height: auto;
     width: 100%;
     display: flex;
     border-bottom: 1px solid rgb(238, 226, 226);
@@ -150,6 +175,7 @@ main {
     z-index: 1;
     background-color: rgb(177, 228, 228);
     top: 10%;
+    
 
 
 }
@@ -159,32 +185,45 @@ main {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 30px;
+      justify-content: center;
+    gap: clamp(16px, 4vw, 45px);
+   font-size: large;
     left: 30%;
 
 
+}
+.bar ul li {
+    white-space: nowrap;
+    font-size: 16px;
 }
 
 .bar ul li a {
     color: black;
     font-weight: 400;
+    ;
 }
 
 .espresso {
     position: relative;
-    height: 100px;
+    height: auto;
     width: 50%;
     left: 60px;
     gap: 10px;
     padding: 15px 0px 0px 0px;
+    font-size: large;
 }
 
 .espresso h1 {
     font-weight: 400;
 }
+.espresso p,
+.pour p {
+    line-height: 1.8;
+    font-size: large;
+}
 
 .grid-section {
-    height: 200vh;
+    height: auto;
 
     text-align: center;
     display: grid;
@@ -198,7 +237,7 @@ main {
 .grid-a {
 
     grid-area: a;
-    height: 600px;
+    height: auto;
     width: 90%;
     position: relative;
     left: 5%;
@@ -207,18 +246,20 @@ main {
 }
 
 #coffe-sec {
-    height: 100%;
+    height: auto;
     width: 100%;
     gap: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
 }
 
-    #boxer {
-        width: %;
-        height: 280px;
 
+
+    #boxer {
+      width: 100%;
+    height: auto;
+    overflow: hidden;
         border-radius: 11px;
         background-color: rgb(243, 238, 232);
 
@@ -233,16 +274,22 @@ main {
 
         grid-column: span 2;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+       
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: 5px;
 
     }
+    
+        
 
     #creamy img {
 
         width: 100%;
         height: 100%;
         border-radius: 11px 0px 0px 11px;
+          min-height: 220px;
+    object-fit: cover;
 
     }
 
@@ -252,6 +299,7 @@ main {
     }
 
     .cont-coffe {
+          
         gap: 20px;
         text-align: start;
         padding: 50px 15px 20px 15px;
@@ -361,7 +409,7 @@ main {
 .grid-r{        
         position: relative;
         grid-area: b;
-        height: 700px;
+        height: 130vh;
         left: 5%;
         width: 90%;
         background-color:rgb(248, 248, 231);
@@ -372,25 +420,33 @@ main {
 
     }
     .pour-container{
-        height: 80%;
+        height: auto;
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content:space-around ;
-        gap: 15px;
+        
+       
+        
         margin-top: 10px;
+        
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
         
        
 
     }
+    
+    
     #pourcard
-        {width: 30%;
-        height: 85%;
+        {
         gap: 6px;
          background-color:rgb(252, 249, 245);
         text-align: center;
         border-radius: 7px;
-        padding: 5px;
+         
+         width: 100%;
+    height: auto;
+    min-width: 0;
+    padding: 10px;
     
     }
     #pourcard:hover{
@@ -398,15 +454,20 @@ main {
          border: 1px solid rgb(219, 209, 209);
     }
 
-    .pour-cord1 img{
-        padding:5px; 
-        height:77%;
-        width: 95%;
+    .pour-cord1 img,.pour-card2 img,.pour-cord3 img{
+       
+        
         background-size: cover;
         border-radius: 7px;
+         width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    object-fit: cover;
     }
     .pour-cont{
         text-align: start;
+         padding: 12px 4px;
     }
 
     .pour-cont span{
@@ -414,14 +475,23 @@ main {
         justify-content: space-between;
     }
     .pour-cont p{
+        font-size: 16px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
         padding: 7px 0px;
     }
     .pour-cont button{
         width: 100%;
-        height: 28px;
+        
         text-align: center;
          background-color: rgb(243, 241, 237);
          border: 1px solid black;
+          width: 100%;
+    height: auto;
+    min-height: 38px;
+    padding: 8px;
+    font-size: 15px;
+
     }  
      .pour-cont button:hover{
         background-color: black;
@@ -429,142 +499,378 @@ main {
      }
     
         
-    .pour-card2 img{
-       padding:5px; 
-        height:77%;
-        width: 95%;
-        background-size: cover;
-        border-radius: 7px;
-    }
+    
    
-    .pour-cord3 img{
-        padding:5px; 
-        height:77%;
-        width: 95%;
-        background-size: cover;
-        border-radius: 7px;
-    }
     
 
 
 
     .grid-c {
         position: relative;
-        height: 110vh;
+      
         grid-area: c;
-     top: 15%;
-        width: 100%;
+     
+        width: 90%;
+    height: auto;
+    /top: auto;
+    margin-top: 20%;
+    padding-bottom: 10px;
 
     }
     .grid-c h1{
         font-weight: 400;
-        position: absolute;
+       
         top:5%;
-        left: 40%;
+        position: static;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: clamp(26px, 4vw, 36px);
+        
     }
     #Specials{
-        width: 100%;
-        height: 270px;
-        position: absolute;
-        top: 25%;
-        display: flex;
         gap: 20px;
+        position: static;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    
     }
-    .cold{
+    .cold,.cloud{
         width: 50%;
-        height: 100%;
-        display: flex;
         position: relative;
-
+         width: 100%;
+    height: auto;
+    min-width: 0;
+    display: flex;
+    
+    position: static;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f8f4ee;
     }
-    .cold img{
+    .cold img,{
         border-radius: 7px;
         border: 3px solid rgb(193, 238, 193);
+        position: static;
+    width: 50%;
+    height: auto;
+    }
+    .cloud img{
+        position: relative;
+        
+        width: 50%;
+    height: auto;
+    
     }
     .cold-cont{
-        text-align: start;
-        gap: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+
         position: relative;
+        min-width: 0;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
     }
+   
     .cold-cont button{
-        width: 130px;
+        width:100%;
+        height: auto;
         background-color: rgb(248, 228, 204);
         border-radius: 21px;
         border: none;
         padding: 5px;
         color: rgb(124, 76, 76);
-        position: absolute;
+        position: static;
         top: 25%;
+        margin: 0;
     }
     .cold-cont h1{
-        position: absolute;
+        position: static;
         top: 35%;
-        width: 300px;
+        width: 100%;
+        height: auto;
+         margin: 0;
         left: 42%;
 
     }
     .cold-cont p{
-        position: absolute;
+        position: static;
         font-size: large;
-        width: 300px;
+        width: 100%;
+        height: auto;
+        margin: 0;
         top: 50%;
         color: rgb(99, 38, 38);
     }
     #frew{
-        position: absolute;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0;
         top: 80%;
     }
-    .cloud{
-        width: 50%;
-        height: 100%;
-        display: flex;
-        position: relative;
-    }
-    .cloud-cont{
-        text-align: start;
-        gap: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
-        position: relative;
+    
+    .cloud-cont{position: relative;
+        min-width: 0;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
     }
     .cloud-cont button{
-        width: 130px;
-        background-color: rgb(236, 231, 225);
+         width:100%;
+        height: auto;
+        background-color: rgb(248, 228, 204);
         border-radius: 21px;
         border: none;
         padding: 5px;
         color: rgb(124, 76, 76);
-        position: absolute;
+        position: static;
         top: 25%;
+        margin: 0;
+        color: rgb(124, 76, 76);
+        
+       
     }
     .cloud-cont h1{
-        position: absolute;
+        position: static;
         top: 35%;
-        width: 300px;
+        width: 100%;
+        height: auto;
+         margin: 0;
         left: 42%;
+
 
     }
     .cloud-cont p{
-        position: absolute;
+         position: static;
         font-size: large;
-        width: 300px;
+        width: 100%;
+        height: auto;
+        margin: 0;
         top: 50%;
         color: rgb(99, 38, 38);
     }
     #brew{
-        position: absolute;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0;
         top: 80%;
     }
-    .cloud img{
-        position: absolute;
-        border-radius: 7px;
-        border: 3px solid rgb(193, 238, 193);
-        left: 57%;
-        height: 97%;
+    
+    
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .nav ul{
+        padding: 0;
+        width: 80%;
     }
+    .grid-section {
+        gap: 30px;
+    }
+
+    .pour-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #Specials {
+        grid-template-columns: 1fr;
+    }
+
+    .cold,
+    .cloud {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .cold img,
+    .cloud img {
+        height: 100%;
+        aspect-ratio: auto;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 580px) {
+    header {
+       
+        min-height: 58px;
+       
+          padding: 10px 4%;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: auto;
+        
+    }
+
+    header h1 {
+        font-size: clamp(16px, 4vw, 22px);
+    }
+
+    .menu-img {
+        min-height: 250px;
+        padding-top: 70px;
+    }
+    .bar{
+        width: 100wv;
+    }
+
+    .bar ul {
+        justify-content: flex-center;
+        width: 40%;
+    }
+
+    .espresso {
+        margin-top: 25px;
+    }
+
+    .grid-section {
+        padding: 10px 0;
+        gap: 30px;
+    }
+    
+     
+    .grid-a,
+    .grid-r,
+    .grid-c {
+        width: 92%;
+        height: auto;
+        flex-wrap: wrap;
+        
+    }
+
+    #coffe-sec {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .latte {
+        grid-column: auto;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #creamy img {
+        min-height: 0;
+        max-height: 260px;
+        aspect-ratio: 16 / 10;
+    }
+
+    .cont-coffe {
+        padding: 16px;
+    }
+
+    .cartado img,
+    .flat img {
+        height: auto;
+        max-height: 230px;
+        aspect-ratio: 16 / 10;
+        margin: 0 12px 12px;
+        width: calc(100% - 24px);
+    }
+
+    .pour-container {
+        height: auto;
+        width: 100%;
+        gap: 18px;
+    }
+
+    #pourcard {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: center;
+        gap: 12px;
+    }
+
+    #pourcard img,
+    .pour-cord1 img,
+    .pour-card2 img,
+    .pour-cord3 img {
+        aspect-ratio: 3 / 4;
+        height: 100%;
+    }
+
+    .pour-cont {
+        padding: 8px 0;
+    }
+
+    #Specials {
+        grid-template-columns: 1fr;
+    }
+
+    .cold,
+    .cloud {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cold img,
+    .cloud img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+    }
+
+    .nav{
+        width: 50%;
+        height: 10%;
+
+    }
+    .nav ul{
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav ul li a {
+        font-size: 16px;
+      
+    } 
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .nav {
+        width: 96%;
+    }
+    .bar{
+        width: 90%;
+    }
+    .bar ul{
+        width: 50%;
+    }
+
+    .nav ul {
+        gap: 0;
+    }
+
+    .nav ul li a {
+        font-size: 9px;
+    }
+
+    #pourcard {
+        grid-template-columns: 1fr;
+    }
+
+    #pourcard img,
+    .pour-cord1 img,
+    .pour-card2 img,
+    .pour-cord3 img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .cont-coffe span h1,
+    .car-tado span h1,
+    .fla-t span h1,
+    .pour-cont h1 {
+        font-size: 17px;
+    }
+}

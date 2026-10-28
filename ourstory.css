@@ -6,12 +6,13 @@
 
 body {
     width: 100%;
-    height: 300vh;
+    height: auto;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 header {
-    height: 7%;
+    height: auto;
     width: 100%;
     display: flex;
     background-color: rgb(243, 243, 232);
@@ -35,7 +36,7 @@ header i {
 
 main {
     width: 100%;
-    height: 120vh;
+    height: auto;
     /background-color: rgb(243, 243, 232);
     position: relative;
 }
@@ -70,7 +71,7 @@ main {
 
 .nav ul li a {
     
-    height: 40px;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -92,37 +93,39 @@ main {
 }
 .frant-back{
     background-image: url(./asseats/ourstory.png);
-    width: 100wv;
-    height: 500px;
+    width: 100vw;
+    height: 60vh;
     background-size: cover;
     position: relative;
     top: 5%;
     color: white;
 }
 .frant-back p{
-    position: absolute;
-    bottom: 16%;
+    position: relative;
+    top:70%;
     font-size: larger;
     left: 4%;
 }
 .frant-back h1{
-    width: 300px;
-    position: absolute;
-    bottom: 0%;
+    width: 30%;
+    position: relative;
+    top: 75%;
     left: 4%;
     font-weight: 500;
 }
 .chapter{
-    height: 600px;
+    height: 50vh;
     position: relative;
     width: 100%;
     display: flex;
+    /flex-wrap: wrap;
+    gap: 5%;
 }
 .ethical{
-    position: absolute;
+    position: relative;
     top: 40%;
     left: 4%;
-    width: 45%;
+    width: 50%;
     gap: 15px;
 }
 .ethical h1{
@@ -138,11 +141,11 @@ main {
 .chapter-img{
     background-image: url(./asseats/chapter.png);
     background-size: cover;
-    width: 40%;
+    width: 35%;
     height: 65%;
-    position: absolute;
+    position: relative;
     top: 30%;
-    right: 5%;
+    right: %;
     border-radius: 11px;
 }
 .chapter-img:hover{
@@ -150,10 +153,12 @@ main {
 }
 .trede{
     width: 100%;
-    height: 300px;
-
+    height: 40vh;
+    gap: 12%;
     position: relative;
     display: flex;
+    flex-direction: row;
+   
     
    
 }
@@ -161,7 +166,7 @@ main {
     background-image: url(./asseats/trede.png);
      width: 31%;
     height: 100%;
-    position: absolute;
+    position: relative;
     border-radius: 7px;
     left: 5%;
     background-size: cover;
@@ -172,15 +177,16 @@ main {
     border-radius: 7px;
     background-color:rgb(186, 243, 224);
     gap: 15px;
-    width: 55%;
-    height: 90%;
+    width: 53%;
+    height: 100%;
     
-    position: absolute;
-    /top: 35%;
+    position: relative;
+    /top: 30%;
     right: 5%;
     padding:  15px;
     text-align: start;
     display: flex;
+    /flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
 }
@@ -198,6 +204,7 @@ main {
     color: white;
     background-color: black;
     display: flex;
+    /flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -207,30 +214,34 @@ main {
 }
 .Story h1{
         font-style: italic;
-        width: 580px;
+        width: 70%;
         font-size: 45px;
 
 
     }
 .alchemy{
     width: 100%;
-    height: 100vh;
+    height: auto;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    gap: 12%;
+    padding: 20px;
 
 }
 .heat-img{
     background-image: url(./asseats/heat.png);
     background-size: cover;
-    width: 35%;
-    height: 90%;
-    position: absolute;
+    width: 45%;
+    height: auto%;
+    position: relative;
     left: 5%;
     top: 5%;
     border-radius: 11px;
+    
 }
 .heat{
-    position: absolute;
+    position: relative;
     right: 5%;
     width: 43%;
     height: 100%;
@@ -251,9 +262,7 @@ main {
     position: relative;
     left: 3%;
 }
-.heat ul li{
-    
-    
+.heat ul li{ 
     left: 10%;
     padding: 7px;
     font-weight: 300;
@@ -261,29 +270,31 @@ main {
 }
 .final-chapter{
     width: 100%;
-    height: 110vh;
+    height: auto;
     background-color: rgb(240, 240, 225);
     text-align: center;
     position: relative;
+    padding: 2%;
 }
 .final-chapter h1{
-    position: absolute;
+    position: relative;
     top: 6%;
-    left: 40%;
+    /left: 40%;
     font-weight: 400;
     font-size: 400;
 }
 .final-chapter p{
-    position: absolute;
+    position: relative;
     top: 2%;
-    left: 45%;
+   / left: 45%;
 }
 .grid-part{
     width: 90%;
-
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
+     height: 70vh;
+    display: flex;
+    justify-content: space-around;
+   
+    /flex-wrap: wrap;
     gap: 10px;
     position: relative;
     left: 7%;
@@ -292,8 +303,8 @@ main {
 }
 #grid-cord{
     position: relative;
-    height: 500px;
-    width: 350px;
+    height: 90%;
+    width: 30%;
     text-align: start;
     background-color: white;
     border-radius: 8px;
@@ -304,70 +315,292 @@ main {
     border: 1px solid brown;
 }
 #card-img1{
-    position: absolute;
+    position: relative;
     left: 5%;
     top: 5%;
     width: 90%;
-    height: 380px;
+    height: 70%;
      background-image: url(./asseats/pourlower.png);
      background-size: cover;
      border-radius: 11px;
 }
 #grid-cord h1 {
-    position: absolute;
-    top: 82%;
+    position: relative;
+    top: 6%;
     left: 5%;
     font-weight: 400;
 }
 #grid-cord p {
     color: rgb(49, 40, 40);
-    position: absolute;
-    top: 90%;
+    position: relative;
+    top: 7%;
     left: 5%;
 }
 #card-img2{
-    position: absolute;
+    position: relative;
     left: 5%;
     top: 5%;
     width: 90%;
-    height: 380px;
+    height: 70%;
      background-image: url(./asseats/the.png);
      background-size: cover;
      border-radius: 11px;
 }
 #card-img3{
-    position: absolute;
+    position: relative;
     left: 5%;
     top: 5%;
     width: 90%;
-    height: 380px;
+    height: 70%;
      background-image: url(./asseats/last.png);
      background-size: cover;
      border-radius: 11px;
 }
 .exprince{
-    height: 400px;
+    height: 60vh;
     width: 100vw;
     position: relative;
 }
 .exprince h1{
     font-weight: 400;
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 40%;
 }
 .exprince button{
-    position: absolute;
-    top: 48%;
+    position: relative;
+    top: 40%;
     left: 39%;
     padding: 15px;
     color: white;
     background-color: black;
     font-size: medium;
-    width: 300px;
-    border: none;
+    width: 25%;
+        border: none;
     border-radius: 11px;
 }
 .exprince button:hover{
     background-color: rgb(49, 43, 43);
 }
+@media screen and (max-width: 680px) {
+    main{position: relative;
+        height: auto;
+        width: ;
+    }
+    .nav{
+        width: 100%;
+        height: 10%;
+    }
+    header{
+        padding: 10px 4%;
+        flex-wrap: wrap;
+        width: 50vw;
+        height: auto;
+        
+    }
+     header h1 {
+        font-size: 18px;
+    }
+
+    .frant-back {
+        width: 100vw;
+        height: 40%;
+        text-align: center;
+    }
+    .font-back h1{
+        position: relative;
+        ;
+        width: 90%;
+    }
+    .chapter{position: relative;
+           
+        margin: 0 ;
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .ethical{
+        width: 90%;
+        position: relative;
+        top: 5%;
+    }
+    .chapter-img{
+        width: 100%;
+        height: 40%;
+        position: relative;
+        top: 15%;
+    }
+    .chapter-img:hover{
+    transform: scale(0.9);
+}
+    .trede{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .trede-img{
+        width: 90%;
+        height: 35%;
+        position: relative;
+        top: 20%;
+
+    }
+    .Direct-trede{
+        width: 90%;
+        height: 30%;
+        position: relative;
+        top: 14%;
+        margin: 15px;
+    }
+    .Story{
+        width: 100%;
+        height: 70vh;
+      
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+    }
+    .Story h1{ width: 90%;}
+    .alchemy{
+        position: relative;
+        top: 50%;
+        width: 90%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .heat-img{
+        height: 40%;
+        width: 90%;
+    }
+    .heat{
+        position: relative;
+        top: 15%;
+        height: 40%;
+        width: 100%;
+        margin: 10PX;
+    }
+    .final-chapter{
+       position: relative;
+       margin-top: 50%;
+        height: 150VH;
+        width: 100%;
+    }
+    .grid-part{
+          display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+    }
+    #grid-cord{
+        height: 40%;
+        width: 90%;
+    }
+    #grid-cord:hover{
+    border: 1px solid brown;
+}
+    .exprince{
+        width: 100%;
+        height: 50vh;
+        text-align: center;
+        position: relative;
+    }
+    .exprince h1{
+        position: relative;
+        width: 100%;
+        left: 5%;
+    }
+    .exprince button{
+        position: relative;
+        left: 8%;
+        width: 40%;
+    }
+    .exprince button:hover{
+    background-color: rgb(49, 43, 43);
+}
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+  header {
+        width: 100%;
+        height: auto;
+        padding: 12px 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    main,
+     {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+
+     
+
+    .frant-back {
+        width: 100%;
+        min-height: 300px;
+        height: auto;
+        padding: 80px 5% 40px;
+        background-position: center;
+        background-size: cover;
+    }
+
+   
+    .nav {
+        width: 94%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+    }
+}
+
+
+
+
+
+/* Small mobile */
+
+@media screen and (max-width: 350px) {
+    header h1 {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 25px 4%;
+    }
+
+    .nav {
+        width: 97%;
+    }
+
+    .nav ul li a {
+        font-size: 9px;
+    }
+}
+

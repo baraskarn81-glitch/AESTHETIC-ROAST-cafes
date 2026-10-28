@@ -7,30 +7,10 @@
     body{
         width: 100vw;
         height: auto;
+        min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
 
-    }
-    @media screen (max-width:450px) {
-        body{
-            width: 100vw;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-           gap:20px;
-            flex-wrap: wrap;
-        }
-        header{
-            width: 100px;   
-            height: 100px;
-        }
-        .grid-sec{
-            display: flex;
-            flex-direction: column;
-        }
-        .grid-batch{
-            display: flex;
-            flex-direction: column;
-        }
-        
     }
     header{
         height: 7%;
@@ -41,58 +21,72 @@
         align-items: center;
         position: fixed;
         z-index: 1;
+
+        gap: 12px;
     }
     
     header p{
         position: relative;
-        left: -7%;
-        font-size: x-large;
+         font-size: clamp(16px, 2vw, 25px);
         font-weight: 600;
     }
     header i{
         position: relative;
-        right: -7%;
+       
     }
     main{
         width: 100vw;
-        height: 300vh;
+        height: auto;
+         min-height: 100vh;
         position: relative;
     }
 
 
     .nav{
         background-color: aquamarine;
-        width: 30%;
-        height: 13%;
+        width: min(360px, 92%);
+    height: auto;
+    min-height: 65px;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    padding: 8px;
         position: fixed;
         z-index: 1;
        
         border-radius: 11px;
-        bottom: 5%;
-        left: 35%;
+       
         
     
     }
     .nav ul{
-        position: relative;
+        
         top: 30%;
-        width: 100%;
-        height: 30%;
+        
         list-style: none;
         display: flex;
         
         justify-content: space-around;
+          position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    gap: 5px;
+    align-items: center;
        
     
     
     }
     .nav ul li a{
         
-         height: 170%;
+           height: auto;
+    padding: 7px 5px;
+    font-size: 16px;
+    overflow-wrap: anywhere;
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 5px;
+        
          color: rgb(121, 63, 63);
          text-decoration: none;
     }
@@ -109,37 +103,51 @@
     
     .order{
         position: relative;
-        height: 95vh;
+       
         width: 100%;
+        min-height: 650px;
+    height: auto;
+    padding: 100px 5% 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
         
-        text-align: center;
+        
         
         background-color:rgb(7, 58, 58);
     }
     .order img{
-        position: absolute;
+          position: static;
+    width: clamp(140px, 22vw, 220px);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
         top: 10%;
         left: 43%   ;
-        height: 200px;
-        width: 200px;
+       
     }
     .order h1{
-        position: absolute;
+        position: static;
         top: 47%;
         left: 35%;
-        width: 400px;
+        width: 100%;
+         max-width: 650px;
         text-align: center;
         color: white;
+        font-size: clamp(30px, 5vw, 55px);
+    overflow-wrap: break-word;
     }
     .order button{
-        position: absolute;
+        position: static;
         top: 65%;
         left: 45%;
         border-radius: 11px;
         color: white;
         border: none;
         background-color: black;
-        padding: 20px 40px;
+        padding: 14px 28px;
     }
     .order button:hover{
     
@@ -149,50 +157,62 @@
 }
     
     .grid-sec{
-        height: 30%;
+       
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1fr,1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas: "a b";
+    height: auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "a b";
+    gap: 30px;
+    padding: 50px 5%;
+    align-items: center;
        
     }
-    @media screen (max-width:450px) {
-        
-    }
+   
     .image-side{
-        width: 50vw;
-        height:120%;
         grid-area: a;
-        position: relative;
-        top: 4%;
+    position: static;
+    width: 100%;
+    height: auto;
+}
       
         
         
-    }
+ 
     .image-side img{
-        position: absolute;
+     
         top: 2%;
         left: 20%;
-        width: 80%;
-        height: 80%;
+       
         border-radius: 11px;
+         position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
     
     }
     .content{
-        width: 55%;
-        position: relative;
-      top: 4%;
+      
       left: 60px;
       display: flex;
       flex-direction: column;
-      align-items:start;
+     
       justify-content: center;
-      gap: 20px;
-        
-        grid-area: b;
-    }
+       grid-area: b;
+    position: static;
+    width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    gap: 18px;
+}
+       
+  
     #content-sign p{
+        
+    max-width: 100%;
+    overflow-wrap: anywhere;
         font-size: large;
         color: rgb(109, 85, 85);
     }
@@ -203,15 +223,20 @@
         padding: 10px 0px;
     }
     .grid-batch{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+       
         grid-template-rows: 1fr;
         grid-template-areas: "ethical small";
-        gap: 10px;
+       
     }
     #ethical{
-        width: 180px;
-        height: 70px;
+         width: 100%;
+    height: auto;
+    min-height: 70px;
+       
         grid-area: ethical;
         border-radius: 7px;
         padding: 8px;
@@ -219,13 +244,15 @@
     }
     #small{
         grid-area: small;
-        width: 180px;
-        height: 70px;
+        width: 100%;
+    height: auto;
+    min-height: 70px;
         border-radius: 7px;
         padding: 8px;
         background-color: antiquewhite;
     }
     .content button{
+         max-width: 100%;
         width: 200px;
         height: 40PX;
         padding: 5px;
@@ -243,11 +270,11 @@
     
 }
     .sellect{
-        height: 380px;
+        height: auto;
         width: 100%;
-        
-        position: absolute;
-        top:70%;
+        padding: 5%;
+        position:relative;
+        top:95%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -271,7 +298,7 @@
     .sellect hr{
         width: 7%;
         text-align: center;
-        position: absolute;
+        position: relative;
         top: 65%;
     }
     .sellect p{
@@ -283,6 +310,7 @@
         position: relative;
         width: 100%;
         height: 70vh;
+        margin-top: 27%;
         text-align: center;
     }
     .join{
@@ -296,34 +324,34 @@
         border-radius: 22PX;
     }
     .join h1{
-        position: absolute;
+        position: relative;
         top: 15%;
-        left: 40%;
+    ;
         font-weight: 400;
     }
     .join p{
         width: 40%;
         font-size: large; 
-        position: absolute;
-        top: 35%;
+        position: relative;
+        top: 20%;
         left: 28%;
     }
     .join span{
-        position: absolute;
-        top: 60%;
-        left: 30%;
+        position: relative;
+        top: 30%;
+        left: 0%;
         width: 50%;
-        height: 15%;
+        height: 5%;
         text-align: center;
     }
     .join span input{
-        height: 100%;
-        width: 60%;
+        height: 10%;
+        width: 40%;
         border: none;
         border-bottom: 1px solid black;
     }
     .join span button{
-        height: 100%;
+        height: 10%;
         padding: 0px 10px;
         color: white;
         background-color: black;
@@ -331,3 +359,92 @@
         border-radius: 5px;
         
     }
+    
+
+
+
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    .grid-sec {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "a"
+            "b";
+        gap: 25px;
+    }
+
+    .image-side img {
+        max-height: 420px;
+        aspect-ratio: 16 / 10;
+    }
+
+    .content {
+        align-items: flex-start;
+    }
+
+    .order {
+        min-height: 600px;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+    header {
+        min-height: 60px;
+        padding: 12px 4%;
+    }
+
+    .order {
+        min-height: 540px;
+        padding: 85px 5% 100px;
+        gap: 20px;
+    }
+
+    .order h1 {
+        font-size: clamp(27px, 8vw, 38px);
+    }
+
+    .grid-sec {
+        padding: 35px 5%;
+    }
+
+    .grid-batch {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #ethical,
+    #small {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .nav {
+        bottom: 10px;
+        width: 94%;
+    }
+
+    .nav ul li a {
+        font-size: 11px;
+        padding: 6px 3px;
+    }
+}
+
+/* Very small phones */
+
+@media screen and (max-width: 350px) {
+    .grid-batch {
+        grid-template-columns: 1fr;
+    }
+
+    .order h1 {
+        font-size: 27px;
+    }
+
+    .nav ul li a {
+        font-size: 10px;
+    }
+}
+
